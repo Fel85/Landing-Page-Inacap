@@ -6,17 +6,32 @@
 
     <!-- este link conecta el css -->
     <link rel="stylesheet" href="CSS/styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- bootstrap (aunque aún no lo usamos mucho, sirve para la nota) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
 
-    <!-- header donde va el titulo principal -->
-    <header class="header-estudiante">
-        <h1>Clases Particulares Pro</h1>
-        <p>Aprende fácil y a tu ritmo</p>
-    </header>
+    <!-- HEADER -->
+        <!-- aquí va el título principal de la página -->
+         <header class="header-estudiante">
 
-    <!-- menu de navegación -->
+            <!-- título arriba -->
+             <h1>Clases Particulares Pro</h1>
+
+             <!-- logo en el medio -->
+              <img src="IMG/icono estudio.jpg" alt="Logo Clases Particulares" class="logo-centro">
+
+              <!-- texto abajo -->
+               <p>Aprende fácil y a tu ritmo</p>
+
+        </header>
+
+       
+      
+    <!-- NAV -->
+    <!-- menú de navegación para moverse en la página -->
     <nav class="nav-estudiante">
         <ul class="lista-nav">
             <li><a href="#inicio">Inicio</a></li>
@@ -26,16 +41,15 @@
         </ul>
     </nav>
 
-    
-    <!-- contenido principal -->
+    <!-- MAIN -->
     <main>
 
-        <!-- primera sección -->
+        <!-- SECCION INICIO -->
         <section id="inicio" class="seccion-estudiante">
             <h2>Bienvenido</h2>
 
             <!-- imagen con alt para accesibilidad -->
-            <img src="IMG/estudiantes-aprendiendo.avif" alt="Estudiante aprendiendo">
+            <img src="IMG/estudiantes-aprendiendo.avif" alt="Estudiantes aprendiendo">
 
             <p>
                 Ofrecemos clases particulares para mejorar tu rendimiento académico
@@ -43,48 +57,59 @@
             </p>
         </section>
 
-        <!-- segunda sección -->
+        <!-- SECCION SERVICIOS -->
+        <!-- esta parte es la que estaba fallando antes -->
         <section id="servicios" class="seccion-estudiante">
+
+            <!-- título arriba (importante) -->
             <h2>Servicios</h2>
 
-            <!-- uso de article como contenido independiente -->
-            <article class="cajita-servicio">
-                <h3>Matemáticas</h3>
-                <p>Clases desde básica hasta avanzada.</p>
-                <img src="IMG/matematicas.webp" alt="Matemáticas">
+            <!-- contenedor grid SOLO para las cards -->
+            <div class="grid-servicios">
 
-            </article>
+                <!-- servicio 1 -->
+                <article class="cajita-servicio">
+                    <h3>Matemáticas</h3>
+                    <p>Clases desde básica hasta avanzada.</p>
+                    <img src="IMG/matematicas.webp" alt="Clases de matemáticas">
+                </article>
 
-            <article class="cajita-servicio">
-                <h3>Programación</h3>
-                <p>Aprende Python y lógica.</p>
-                <img src="IMG/python - logica.jpg" alt="Programación">
-            </article>
+                <!-- servicio 2 -->
+                <article class="cajita-servicio">
+                    <h3>Programación</h3>
+                    <p>Aprende Python y lógica.</p>
+                    <img src="IMG/python - logica.jpg" alt="Clases de programación">
+                </article>
 
-            <article class="cajita-servicio">
-                <h3>Apoyo escolar</h3>
-                <p>Refuerzo general para estudiantes.</p>
-                <img src="IMG/apoyo-escolar.jpg" alt="Apoyo escolar">
-            </article>
+                <!-- servicio 3 (queda centrado abajo) -->
+                <article class="cajita-servicio">
+                    <h3>Apoyo escolar</h3>
+                    <p>Refuerzo general para estudiantes.</p>
+                    <img src="IMG/apoyo-escolar.jpg" alt="Apoyo escolar">
+                </article>
+
+            </div>
+
         </section>
 
-        <!-- tercera sección -->
+        <!-- SECCION INFO -->
         <section id="info" class="seccion-estudiante">
             <h2>¿Por qué elegirnos?</h2>
-            <img src="IMG/elergirnos.jpg" alt="">
+
+            <img src="IMG/elergirnos.jpg" alt="Estudiantes aprendiendo juntos">
 
             <p>
                 Somos un emprendimiento local enfocado en ayudar a estudiantes
-                con clases claras y personalizadas.
+                con clases claras, prácticas y personalizadas.
             </p>
         </section>
 
-        <!-- sección de contacto -->
+        <!-- SECCION CONTACTO -->
         <section id="contacto" class="seccion-estudiante">
-            <h2>Contacto</h2>
+            <h2>Contáctanos</h2>
 
-            <!-- formulario (IA me ayudó a recordar la estructura) -->
-            <!-- Código sugerido por IA para estructura base del formulario -->
+            <!-- formulario (IA ayudó a recordar estructura base) -->
+            <!-- Código sugerido por IA -->
             <form class="form-estudiante">
 
                 <label for="nombre">Nombre:</label>
@@ -103,7 +128,7 @@
 
     </main>
 
-    <!-- footer -->
+    <!-- FOOTER -->
     <footer class="footer-estudiante">
         <p>© 2026 Clases Particulares Pro</p>
     </footer>

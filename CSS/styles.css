@@ -1,68 +1,94 @@
-/* este css lo hice simple para que funcione bien sí o sí */
-
-/* reset básico para evitar errores raros */
+/* ========================================= */
+/* RESET (esto evita errores raros) */
+/* ========================================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* estilos generales */
+/* ========================================= */
+/* ESTILOS GENERALES */
+/* ========================================= */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4; /* fondo gris claro */
+    background-color: #f4f4f4;
     color: #222;
 }
 
-/* header */
+/* títulos */
+h1 {
+    font-size: 2.2rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #003366;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+/* texto */
+p {
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* ========================================= */
+/* HEADER */
+/* ========================================= */
 .header-estudiante {
     background-color: #1e1e1e;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 25px;
 }
 
-/* nav */
+/* ========================================= */
+/* NAV */
+/* ========================================= */
 .nav-estudiante {
     background-color: #333;
+    position: sticky;
+    top: 0;
 }
 
-/* lista del menú */
 .lista-nav {
     display: flex;
     justify-content: center;
     list-style: none;
-    padding: 10px;
+    padding: 12px;
 }
 
-/* items del menú */
 .lista-nav li {
     margin: 0 15px;
 }
 
-/* links */
 .lista-nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-/* hover */
 .lista-nav a:hover {
     color: #00bcd4;
 }
 
-/* secciones */
+/* ========================================= */
+/* SECCIONES GENERALES */
+/* ========================================= */
 .seccion-estudiante {
     background-color: white;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-/* títulos */
-h2 {
-    margin-bottom: 10px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 1000px;
 }
 
 /* imágenes */
@@ -74,37 +100,82 @@ h2 {
     border-radius: 10px;
 }
 
-/* contenedor de servicios */
-#servicios {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+/* ========================================= */
+/* SERVICIOS (GRID) */
+/* ========================================= */
+
+/* título separado */
+#servicios h2 {
+    margin-bottom: 30px;
 }
 
-/* cada servicio */
+/* contenedor */
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    justify-items: center;
+}
+
+/* tercera card centrada */
+.grid-servicios article:nth-child(3) {
+    grid-column: span 2;
+}
+
+/* tarjetas */
 .cajita-servicio {
-    border: 1px solid #ccc;
-    padding: 15px;
-    border-radius: 10px;
-    flex: 1 1 250px;
+    width: 100%;
+    max-width: 320px;
+    background-color: #fafafa;
+    border-radius: 15px;
+    padding: 20px;
     text-align: center;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+}
+
+/* efecto hover */
+.cajita-servicio:hover {
+    transform: translateY(-5px);
 }
 
 /* imágenes dentro de servicios */
 .cajita-servicio img {
-    max-width: 200px;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
     margin-top: 10px;
 }
 
-/* formulario */
+/* ========================================= */
+/* SECCION INFO */
+/* ========================================= */
+#info p {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ========================================= */
+/* FORMULARIO */
+/* ========================================= */
 .form-estudiante {
     display: flex;
     flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-/* inputs */
+.form-estudiante label {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: left;
+}
+
 .form-estudiante input,
 .form-estudiante textarea {
+    margin-top: 5px;
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 5px;
@@ -115,9 +186,10 @@ h2 {
 .form-estudiante button {
     background-color: #007BFF;
     color: white;
-    padding: 10px;
+    padding: 12px;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 /* hover botón */
@@ -125,7 +197,9 @@ h2 {
     background-color: #0056b3;
 }
 
-/* footer */
+/* ========================================= */
+/* FOOTER */
+/* ========================================= */
 .footer-estudiante {
     background-color: #1e1e1e;
     color: white;
@@ -134,17 +208,55 @@ h2 {
     margin-top: 20px;
 }
 
-/* responsive */
+/* ========================================= */
+/* RESPONSIVE */
+/* ========================================= */
 @media (max-width: 768px) {
 
-    /* menú en vertical */
+    /* menú vertical */
     .lista-nav {
         flex-direction: column;
         align-items: center;
     }
 
     /* servicios en columna */
-    #servicios {
-        flex-direction: column;
+    .grid-servicios {
+        grid-template-columns: 1fr;
     }
+
+    /* tercera card normal en mobile */
+    .grid-servicios article:nth-child(3) {
+        grid-column: span 1;
+    }
+}
+
+
+
+/* ========================================= */
+/* LOGO CENTRADO EN HEADER */ /*REALIZADO CON IA*/
+/* ========================================= */
+
+.header-estudiante {
+    background-color: #1e1e1e;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+/* logo */
+.logo-centro {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin: 15px 0;
+}
+
+/* ajustar textos */
+.header-estudiante h1 {
+    margin-bottom: 5px;
+}
+
+.header-estudiante p {
+    margin-top: 5px;
+    font-size: 1rem;
 }
