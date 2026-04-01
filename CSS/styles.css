@@ -1,5 +1,5 @@
 /* ========================================= */
-/* RESET (esto evita errores raros) */
+/* RESET  */
 /* ========================================= */
 * {
     margin: 0;
@@ -51,7 +51,7 @@ p {
 }
 
 /* ========================================= */
-/* NAV */
+/* NAV */ 
 /* ========================================= */
 .nav-estudiante {
     background-color: #333;
@@ -101,7 +101,7 @@ p {
 }
 
 /* ========================================= */
-/* SERVICIOS (GRID) */
+/* SERVICIOS (GRID) */ /*Utilice IA para realizar esta sección*/
 /* ========================================= */
 
 /* título separado */
@@ -209,7 +209,7 @@ p {
 }
 
 /* ========================================= */
-/* RESPONSIVE */
+/* RESPONSIVE */ 
 /* ========================================= */
 @media (max-width: 768px) {
 
@@ -233,7 +233,7 @@ p {
 
 
 /* ========================================= */
-/* LOGO CENTRADO EN HEADER */ /*REALIZADO CON IA*/
+/* LOGO CENTRADO EN HEADER */ /*REALIZADO CON IA PARA CENTRAR LOCO*/
 /* ========================================= */
 
 .header-estudiante {

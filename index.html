@@ -4,34 +4,42 @@
     <meta charset="UTF-8">
     <title>Clases Particulares Pro</title>
 
-    <!-- este link conecta el css -->
+    <!-- CSS propio -->
     <link rel="stylesheet" href="CSS/styles.css">
 
-    <!-- bootstrap (aunque aún no lo usamos mucho, sirve para la nota) -->
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- HEADER -->
-        <!-- aquí va el título principal de la página -->
-         <header class="header-estudiante">
+    <!-- ========================================= -->
+    <!-- HEADER (CON LOGO + BOTONES) -->
+    <!-- ========================================= -->
+    <header class="bg-dark text-white text-center py-5">
 
-            <!-- título arriba -->
-             <h1>Clases Particulares Pro</h1>
+        <div class="container">
 
-             <!-- logo en el medio -->
-              <img src="IMG/icono estudio.jpg" alt="Logo Clases Particulares" class="logo-centro">
+            <h1 class="fw-bold">Clases Particulares Pro</h1>
 
-              <!-- texto abajo -->
-               <p>Aprende fácil y a tu ritmo</p>
+            <!-- logo centrado -->
+            <img src="IMG/icono estudio.jpg" alt="Logo Clases Particulares" class="my-3" width="80">
 
-        </header>
+            <p class="lead">Aprende fácil y a tu ritmo</p>
 
-       
-      
+            <!-- botones -->
+            <div class="mt-4">
+                <a href="#contacto" class="btn btn-primary me-2">Reservar Clase</a>
+                <a href="#servicios" class="btn btn-outline-light">Ver Servicios</a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- ========================================= -->
     <!-- NAV -->
-    <!-- menú de navegación para moverse en la página -->
+    <!-- ========================================= -->
     <nav class="nav-estudiante">
         <ul class="lista-nav">
             <li><a href="#inicio">Inicio</a></li>
@@ -41,14 +49,15 @@
         </ul>
     </nav>
 
+    <!-- ========================================= -->
     <!-- MAIN -->
+    <!-- ========================================= -->
     <main>
 
-        <!-- SECCION INICIO -->
-        <section id="inicio" class="seccion-estudiante">
+        <!-- INICIO -->
+        <section id="inicio" class="seccion-estudiante text-center">
             <h2>Bienvenido</h2>
 
-            <!-- imagen con alt para accesibilidad -->
             <img src="IMG/estudiantes-aprendiendo.avif" alt="Estudiantes aprendiendo">
 
             <p>
@@ -57,43 +66,75 @@
             </p>
         </section>
 
-        <!-- SECCION SERVICIOS -->
-        <!-- esta parte es la que estaba fallando antes -->
-        <section id="servicios" class="seccion-estudiante">
+        <!-- CTA EXTRA -->
+        <section class="text-center py-4 bg-light">
+            <h2>¡Empieza hoy mismo!</h2>
+            <a href="#contacto" class="btn btn-success mt-2">Contáctanos</a>
+        </section>
 
-            <!-- título arriba (importante) -->
-            <h2>Servicios</h2>
+        <!-- ========================================= -->
+        <!-- SERVICIOS (BOOTSTRAP BIEN USADO) -->
+        <!-- ========================================= -->
+        <section id="servicios" class="container my-5">
 
-            <!-- contenedor grid SOLO para las cards -->
-            <div class="grid-servicios">
+            <h2 class="text-center mb-4">Servicios</h2>
+
+            <div class="row text-center">
 
                 <!-- servicio 1 -->
-                <article class="cajita-servicio">
-                    <h3>Matemáticas</h3>
-                    <p>Clases desde básica hasta avanzada.</p>
-                    <img src="IMG/matematicas.webp" alt="Clases de matemáticas">
-                </article>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow">
+
+                        <img src="IMG/matematicas 2.jpg" class="card-img-top" alt="Matemáticas">
+
+                        <div class="card-body">
+                            <h3 class="card-title">Matemáticas</h3>
+                            <p class="card-text">Clases desde básica hasta avanzada.</p>
+
+                            <a href="#contacto" class="btn btn-primary">Solicitar</a>
+                        </div>
+
+                    </div>
+                </div>
 
                 <!-- servicio 2 -->
-                <article class="cajita-servicio">
-                    <h3>Programación</h3>
-                    <p>Aprende Python y lógica.</p>
-                    <img src="IMG/python - logica.jpg" alt="Clases de programación">
-                </article>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow">
 
-                <!-- servicio 3 (queda centrado abajo) -->
-                <article class="cajita-servicio">
-                    <h3>Apoyo escolar</h3>
-                    <p>Refuerzo general para estudiantes.</p>
-                    <img src="IMG/apoyo-escolar.jpg" alt="Apoyo escolar">
-                </article>
+                        <img src="IMG/python - logica.jpg" class="card-img-top" alt="Programación">
+
+                        <div class="card-body">
+                            <h3 class="card-title">Programación</h3>
+                            <p class="card-text">Aprende Python y lógica.</p>
+
+                            <a href="#contacto" class="btn btn-primary">Solicitar</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- servicio 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow">
+
+                        <img src="IMG/apoyo-escolar.jpg" class="card-img-top" alt="Apoyo escolar">
+
+                        <div class="card-body">
+                            <h3 class="card-title">Apoyo escolar</h3>
+                            <p class="card-text">Refuerzo general para estudiantes.</p>
+
+                            <a href="#contacto" class="btn btn-primary">Solicitar</a>
+                        </div>
+
+                    </div>
+                </div>
 
             </div>
 
         </section>
 
-        <!-- SECCION INFO -->
-        <section id="info" class="seccion-estudiante">
+        <!-- INFO -->
+        <section id="info" class="seccion-estudiante text-center">
             <h2>¿Por qué elegirnos?</h2>
 
             <img src="IMG/elergirnos.jpg" alt="Estudiantes aprendiendo juntos">
@@ -104,12 +145,11 @@
             </p>
         </section>
 
-        <!-- SECCION CONTACTO -->
+        <!-- CONTACTO -->
         <section id="contacto" class="seccion-estudiante">
-            <h2>Contáctanos</h2>
+            <h2 class="text-center">Contáctanos</h2>
 
-            <!-- formulario (IA ayudó a recordar estructura base) -->
-            <!-- Código sugerido por IA -->
+            <!-- formulario (estructura base sugerida por IA) -->
             <form class="form-estudiante">
 
                 <label for="nombre">Nombre:</label>
