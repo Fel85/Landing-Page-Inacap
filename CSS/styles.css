@@ -1,0 +1,150 @@
+/* este css lo hice simple para que funcione bien sí o sí */
+
+/* reset básico para evitar errores raros */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* fondo gris claro */
+    color: #222;
+}
+
+/* header */
+.header-estudiante {
+    background-color: #1e1e1e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* nav */
+.nav-estudiante {
+    background-color: #333;
+}
+
+/* lista del menú */
+.lista-nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px;
+}
+
+/* items del menú */
+.lista-nav li {
+    margin: 0 15px;
+}
+
+/* links */
+.lista-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* hover */
+.lista-nav a:hover {
+    color: #00bcd4;
+}
+
+/* secciones */
+.seccion-estudiante {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* títulos */
+h2 {
+    margin-bottom: 10px;
+}
+
+/* imágenes */
+.seccion-estudiante img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+/* contenedor de servicios */
+#servicios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* cada servicio */
+.cajita-servicio {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    flex: 1 1 250px;
+    text-align: center;
+}
+
+/* imágenes dentro de servicios */
+.cajita-servicio img {
+    max-width: 200px;
+    margin-top: 10px;
+}
+
+/* formulario */
+.form-estudiante {
+    display: flex;
+    flex-direction: column;
+}
+
+/* inputs */
+.form-estudiante input,
+.form-estudiante textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* botón */
+.form-estudiante button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* hover botón */
+.form-estudiante button:hover {
+    background-color: #0056b3;
+}
+
+/* footer */
+.footer-estudiante {
+    background-color: #1e1e1e;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+
+    /* menú en vertical */
+    .lista-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* servicios en columna */
+    #servicios {
+        flex-direction: column;
+    }
+}
